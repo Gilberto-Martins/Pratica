@@ -5,8 +5,14 @@ body{
 
 header ul{
     display: flex;
-    justify-content: space-between;
     list-style: none;
+}
+
+header li{
+    
+    border: 1px solid black;
+    margin: 1.3rem 0;
+    
 }
 
 article{
