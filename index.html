@@ -4,83 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>POO em JavaScript</title>
+    <title>Manipulando e iteração de Arrays</title>
 </head>
 
 <body>
-    <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="#classe">Classe</a></li>
-                <li><a href="#herança">Herança</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <article>
-        <div id="classe">
-            <h2>Classes</h2>
+    <section>
+        <div class="criar">
+            <h2>Para criar um Array</h2>
             <p>
-                É baseada em prototipos. <br>
-                Prototype, é uma variavel que armazena as definições do obijeto. <br> <br>
-                toda vez que uma variavel é criada ele ganha uma referencia chamada: <strong>_proto_</strong> que aponta para o <strong>prototype</strong> do tipo que foi criado, esse tipo é chamado de construtor(<strong>constructor</strong>) <br> <br>
+                const arr = [1,2,3];
+                <br><br>
+                const arr2 = new Array(1,2,3); <br><br>
+                é possivel criar um Array chamando a função <strong>Array.of</strong> <br>const arr =
+                Array.of(1,2,3)<br><br>
+                independente do tipo o Array.of funciona com todos ex:
+                <br><br>
+                const pessoas = Array.of(1,2,'net','text');
+                <br> ira criar o array com esse elementos, não importando <br><br>
 
-                class Pessoa{ <br>
-                    constructor (name){ <br>
-                        this.name = name; <br>
-                    }
-                } <br> <br>
+                Cria uma nova instacia de array a partir de um parametro array-like ou iterable object com o
+                <strong>Array.from</strong> <br>
+                ex: <strong> const divs = document.querySelectorAll('div'); <br>
+                    const arr = Array.from(divs);
+                </strong>
+                
+            </p>
 
-                class Fessoaf extend Pessoa{ <br>
-                    constructor(name , cpf){ <br>
-                        super(name); <br>
-                        this.cpf = cpf; <br>
-                    } <br>
-                } <br>
+            <h2>Inserir e remover elementos</h2>
+            <h4>push</h4>
+            <p>
+                Adicionar um ou mais elementos no final do array e retona o tamanho do novo array <br>
+                ex: <strong>
+                    const arr = ['maça','banana']; <br>
+                    arr.push('uva');<br> ira adiciona depois do ultimo elemento ficando: arr = ['maça','banana','uva']
+                </strong>
             </p>
         </div>
-
-        <div id="herança">
-            <h2>Herança</h2>
-            <p>
-                ES6 <br> <br>
-                Simplicação da herança de prototipos <br><br>
-                oalavra chave class <br><br>
-
-            </p>
-        </div>
-
-        <div class="acesso">
-            <h2>Modificadores de acesso</h2>
-            <p>
-                O js não tem modificadores de acesso. <br>
-                para silanizar que um atributo é publico basta declara a variavel com let, ex <strong>funcion Pessoa(initName){<br>
-                     let name = initName; <br>
-                    }</strong> <br><br>
-
-                Para definir como <strong>Privada</strong> basta colocar em ves de let, uma <strong>#</strong> no logar do let, ex: <br> <br>
-                <strong>funcion Pessoa(name){
-                    #name = name <br>
-                }</strong>  <br> <br> mais toda as vezes que for referenciar ele tem que colocar a #. <br>
-            </p>
-        </div>
-
-        <div class="encapsulamento">
-            <h2>Encapsulamento</h2>
-            <p>
-                serve par ocultar detalhes do funcionanemto interno
-            </p>
-        </div>
-
-        <div class="static">
-            <h2>Static</h2>
-            <p>
-                permite acessar metodos/atributos sem instanciar
-            </p>
-        </div>
-
-    </article>
+    </section>
 </body>
 
 </html>

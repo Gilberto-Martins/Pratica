@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>POO em JavaScript</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#classe">Classe</a></li>
+                <li><a href="#herança">Herança</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <div id="classe">
+            <h2>Classes</h2>
+            <p>
+                É baseada em prototipos. <br>
+                Prototype, é uma variavel que armazena as definições do obijeto. <br> <br>
+                toda vez que uma variavel é criada ele ganha uma referencia chamada: <strong>_proto_</strong> que aponta para o <strong>prototype</strong> do tipo que foi criado, esse tipo é chamado de construtor(<strong>constructor</strong>) <br> <br>
+
+                class Pessoa{ <br>
+                    constructor (name){ <br>
+                        this.name = name; <br>
+                    }
+                } <br> <br>
+
+                class Fessoaf extend Pessoa{ <br>
+                    constructor(name , cpf){ <br>
+                        super(name); <br>
+                        this.cpf = cpf; <br>
+                    } <br>
+                } <br>
+            </p>
+        </div>
+
+        <div id="herança">
+            <h2>Herança</h2>
+            <p>
+                ES6 <br> <br>
+                Simplicação da herança de prototipos <br><br>
+                oalavra chave class <br><br>
+
+            </p>
+        </div>
+
+        <div class="acesso">
+            <h2>Modificadores de acesso</h2>
+            <p>
+                O js não tem modificadores de acesso. <br>
+                para silanizar que um atributo é publico basta declara a variavel com let, ex <strong>funcion Pessoa(initName){<br>
+                     let name = initName; <br>
+                    }</strong> <br><br>
+
+                Para definir como <strong>Privada</strong> basta colocar em ves de let, uma <strong>#</strong> no logar do let, ex: <br> <br>
+                <strong>funcion Pessoa(name){
+                    #name = name <br>
+                }</strong>  <br> <br> mais toda as vezes que for referenciar ele tem que colocar a #. <br>
+            </p>
+        </div>
+
+        <div class="encapsulamento">
+            <h2>Encapsulamento</h2>
+            <p>
+                serve par ocultar detalhes do funcionanemto interno
+            </p>
+        </div>
+
+        <div class="static">
+            <h2>Static</h2>
+            <p>
+                permite acessar metodos/atributos sem instanciar
+            </p>
+        </div>
+
+    </article>
+</body>
+
+</html>
