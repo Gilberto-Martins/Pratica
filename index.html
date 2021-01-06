@@ -27,7 +27,7 @@
                 ex: <strong> const divs = document.querySelectorAll('div'); <br>
                     const arr = Array.from(divs);
                 </strong>
-                
+
             </p>
 
             <h2>Inserir e remover elementos</h2>
@@ -37,6 +37,298 @@
                 ex: <strong>
                     const arr = ['maça','banana']; <br>
                     arr.push('uva');<br> ira adiciona depois do ultimo elemento ficando: arr = ['maça','banana','uva']
+                </strong>
+            </p>
+
+            <h4>pop</h4>
+            <p>
+                Remove o ultimo elemento de um array e retorna o elemento removido. <br>
+                ex: <strong>
+                    const numerosPar = [2,4,6,8,10]; <br>
+                    numerosPar.pop()
+                </strong>
+            </p>
+
+            <h4>Para adicionar no inicio de um Array</h4>
+            <p>
+                Diferente do push, o <strong>unshift</strong> adiciona no inicio do array e retorna o tamanho do array.
+                <br>
+                ex: <strong>const imp = [3,5,7] <br>
+                    imp.unshift(1);
+                </strong>
+            </p>
+
+            <h4>Para remover no inicio</h4>
+            <p>
+                Para remover no inicio do array se usa o: <strong>shift</strong> <br>
+                ex: <strong>const imp = [0,1,3,5,7] <br>
+                    imp.shift();
+                </strong>
+            </p>
+
+            <h4>concat</h4>
+            <p>
+                o Concat pertimter concatena um ou mais arrays retornando um novo array <br>
+                ex:
+                <br>
+                <strong>
+                    const frutas = ['melancia','banana']; <br>
+                    const salgados = ['coxinha','kibe','empada'];<br><br>
+                    const alimentos = frutas.concat(salgados);
+                </strong>
+            </p>
+
+            <h4>slice</h4>
+            <p>
+                Retonra um novo array "fatiando" o array de acordo com inicio e fim. <br>
+                ex: const arr = [1,2,3,4,5];<br> <br>
+                arr.slice(0,2); vai pega o da primeira e o segundo elemento = [1,2] <br><br>
+                arr.slice(2);// aqui ele vai pegar a parti do indici 2 ficando: [3,4,5];
+                <br><br>
+            </p>
+
+            <h4>splice</h4>
+            Altera um array adicionando novos elementos enquanto remove elementos antigos. <br>
+            ex:
+            <br>
+            <strong>
+                const arr = [1,2,3,4,5]; <br><br>
+                arr.splaice(2); // apartir da pocissão 2 ele vei remover <br> <br>
+
+                arr.splace(0,0,'frist'); <br> <br>
+                // o priemro '0' é para informar onde vai ser inserido o elemento ja o segundo '0' é para informa
+                quantos elementos serão removidos, e o 'frist' é o elelento que esta cendo atribuido
+            </strong>
+        </div>
+
+        <div>
+            <h2>Iterar elementos</h2>
+
+            <h4>forEach</h4>
+            <p>
+                Iteração de cada item dentro de um array. <br><br>
+                ex: <strong> <br>
+                    const arr = [1,2,3,4,5]; <br><br>
+                    arr.forEach((value, index) => { <br>
+                    console.log(`${index}: ${value}`);<br>
+                    });
+                </strong>
+            </p>
+
+            <h4>map</h4>
+            <p>
+                Retorna um novo array, de mesmo tamnho, iterando cada item de um array. <br><br>
+
+                ex: <br>
+                <strong>
+                    const arr = [1,2,3,4,5]; <br> <br>
+                    arr.map(value => value * 2);<br>
+                </strong>
+                esse comando vai pega cada valor do array(elemento) e mutiplicar por 2 gerando um novo array com esse
+                valores
+            </p>
+
+            <h4>flat</h4>
+            <p>
+                Retorna um novo array com todos os elementos de um sub-array cocatenados de forma recursiva de acordo
+                com a profundidade especificada(depth). <br><br>
+                ex:
+                <br>
+                <strong>
+                    const arr = [1,2,[3,4]]; <br><br>
+
+                    arr.flat();// vai resulta em = [1,2,3,4]
+                </strong>
+            </p>
+
+            <h4>flatMap</h4>
+            <p>
+                Retonra um novo array assim como a função map e executa um flat de profundidade 1 <br><br>
+                ex:
+                <strong>
+                    const arr = [1,2,3,4];<br> <br>
+
+                    arr.flatMap(value => [value * 2]); // retornando [2,4,6,8] <br><br>
+                    arr.flatMap(value => [[value * 2]]); // retornando [[2],[4],[6],[8]]
+                </strong>
+            </p>
+
+            <h4>keys</h4>
+            <p>
+                Retorna um <strong>Array iterator</strong> que contem as chaves para cada elemento do array <br><br>
+
+                ex: <strong> const arr = [1,2,3,4]; <br>
+                    const arraInt = = arr.keys(); <br><br>
+
+                    arraInt.next(); retorna {value: 0, done: false} <br><br>
+                    arraInt.next(); retorna {value: 1, done: false} <br><br>
+                    arraInt.next(); retorna {value: 2, done: false} <br><br>
+                    arraInt.next(); retorna {value: 3, done: true} <br><br>
+                </strong>
+            </p>
+
+            <h4>values</h4>
+            <p>
+                Retorna um <strong>Array iterator</strong> que contem os valores para cada elemento do array. <br><br>
+                ex: <strong>
+                    const arr = [1,2,3,4]; <br><br>
+                    const arrInt = arr.values(); <br><br>
+
+                    arrInt.next(); retorna {value: 1, done: false} <br><br>
+                    arrInt.next(); retorna {value: 2, done: false} <br><br>
+                    arrInt.next(); retorna {value: 3, done: false} <br><br>
+                    arrInt.next(); retorna {value: 4, done: true} <br><br>
+                </strong>
+            </p>
+
+            <h4>entries</h4>
+            <p>
+                o <strong>entries</strong> permite retorna a chave e o valor simultaniamente do array. <br><br>
+
+                ex: <strong>
+                    const arr = [1,2,3,4]; <br><br>
+                    const arr2 = arr.entries(); <br><br>
+
+                    arrInt.next(); retorna {value: [0,1], done: false} <br><br>
+                    arrInt.next(); retorna {value: [1,2], done: false} <br><br>
+                    arrInt.next(); retorna {value: [2,3], done: false} <br><br>
+                    arrInt.next(); retorna {value: [3,4], done: true} <br><br>
+                </strong>
+            </p>
+        </div>
+
+        <div>
+            <h2>Buscar Elementos</h2>
+
+            <h4>find</h4>
+            <p>
+                Retorna o primeiro item de um array que satisfaz a condição percorrendo atraves dos valores. <br><br>
+
+                ex: <strong>
+                    const arr = [1,2,3,4]; <br><br>
+                    const arr2 = arr.find(value => value > 2); <br>
+                    console.log(arr2)// vai retorna 3
+                </strong>
+            </p>
+
+            <h4>findIndex</h4>
+            <p>
+                Faz o mesmo que o find, porem ele percorre e procura pelo index. <br><br>
+                ex: <strong>
+                    const arr = [1,2,3,4]; <br><br>
+                    const arr2 = arr.findIndex( value => value > 2); <br><br>
+                    console.log(arr2);// vai retorna o index 2
+                </strong>
+            </p>
+
+            <h4>filter</h4>
+            <p>
+                O <strong>filter</strong> ira retorna todos os elementos que satisfazem a condição. <br><br>
+                ex: <strong>
+                    const arr = [1,2,3,4,5]; <br><br>
+                    const arr2 = arr.filter(value => value > 3); <br><br>
+                    console.log(arr2);// vai retorna [4,5]
+                </strong>
+            </p>
+
+            <h4>indexOf</h4>
+            <p>
+                Retonra o peimrio indice em que um elemento pode ser encontrado no array. <br><br>
+
+                ex: <strong>
+                    const = arr = [1,3,3,4,3]; <br><br>
+
+                    const arr2 = arr.indexOf(3); <br><br>
+                    console.log(arr2); // vai retonra o indece 1
+                </strong>
+            </p>
+
+            <h4>lastIndexOf</h4>
+            <p>
+                Retonra o <strong>ultimo</strong> indice em que um elemento pode ser encontrado no array. <br><br>
+
+                ex: <strong>
+                    const = arr = [1,3,3,4,3]; <br><br>
+
+                    const arr2 = arr.lastIndexOf(3); <br><br>
+                    console.log(arr2); // vai retonra o indece 4
+                </strong>
+            </p>
+
+            <h4>includes</h4>
+            <p>
+                Retorna um booleano verificando se determinado elemento existe no array. <br><br>
+
+                ex: <strong>
+                    const arr = [1,3,3,4,3]; <br><br>
+                    const arr2 = arr.includes(1); // retorna true <br><br>
+                    const arr3 = arr.includes(2); // retorna false
+                </strong>
+            </p>
+
+            <h4>some</h4>
+            <p>
+                Retorna um boolenao verificado se pelo menos um item de um array satisfaz a condição. <br><br>
+
+                ex: <strong>
+                    const arr = [1,3,3,4,3]; <br><br>
+                    const arr2 = arr.some(value => value %2 === 0); // retorna true
+                </strong>
+            </p>
+
+            <h4>every</h4>
+            <p>
+                Retorna um booleano verificando se todos os itens de um array satisfazem a condição. <br><br>
+
+                ex: <strong>
+                    const arr = [1,3,3,4,3]; <br><br>
+                    const arr2 = arr.every(value => value %2 === 0); // retorna false
+                </strong>
+            </p>
+        </div>
+
+        <div class="ordenar">
+            <h2>Ordenar elementos</h2>
+            <h4>sort</h4>
+            <p>
+                Ordena os elementos de um array de acordo com a condição. <br><br>
+                ex: <strong>
+                    const arr = [1,3,2,5,4]; <br><br>
+                    arr.sort();//   retorna  [1,2,3,4,5]
+                </strong>
+            </p>
+
+            <h4>reverse</h4>
+            <p>
+                Inverter os elementos de um array. <br><br>
+                ex: <strong>
+                    const arr = [1,2,3,4,5]; <br><br>
+
+                    arr.reverse();// vai retorna [5,4,3,2,1]
+                </strong>
+            </p>
+        </div>
+
+        <div class="transfomra">
+            <h2>Transfomar em outro tipo de dados</h2>
+            <h4>join</h4>
+            <p>
+                junta todos os elementos de um array, separados por um delimitador e retonrando uma string. <br><br>
+
+                ex: <strong>
+                    const arr = [1,2,3,4,5]; <br><br>
+
+                    arr.join('|'); // vai retorna "1|2|3|4|5"
+                </strong>
+            </p>
+
+            <h4>reduce</h4>
+            <p>
+                Retonra um novo tipo de dado iterando cada posição de um array. <br><br>
+
+                ex: <strong>
+                    const arrt = [1,2,3,4,5]; <br><br>
+                    arr.reduce((total, value) => total += value, 0);// retona 15 o '0' indica que o total é do tipo numerico e que seu valor inicial é 0
                 </strong>
             </p>
         </div>
