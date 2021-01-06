@@ -3,16 +3,13 @@ body{
     margin: 0;
 }
 
-header ul{
-    display: flex;
+.menu li{
+    float: left;
     list-style: none;
 }
 
-header li{
-    
-    border: 1px solid black;
-    margin: 1.3rem 0;
-    
+.menu a{
+    margin-right: 25px;
 }
 
 article{
