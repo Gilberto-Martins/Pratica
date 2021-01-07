@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css.css">
+    <link rel="stylesheet" href="style.css">
     <title>Fundamentos de Arquitetura de Sistemas</title>
 </head>
 
@@ -22,21 +23,201 @@
 </body>
 
 <article>
+    <h1>Fundamentos de Arquitetura de Sistemas</h1>
+
     <div class="Web">
-        <div class="art"></div>
-        <div class="art"></div>
-        <div class="art"></div>
+        <h2>Vantagens e desenvolvimento de Web Services</h2>
+        <div class="art">
+            <h4>Serviços Web</h4>
+            <p>
+            <ul>
+                <li>O que são Serviços Web</li>
+                <li>As vantagens de utilizar Serviços Web</li>
+                <li>Tecnologias mais utilizados para desenvolvimento de Serviços Web</li>
+            </ul>
+            </p>
+
+            <p>
+            <h6>Serviços Web</h6>
+            <ul>
+                <li>Serviços Web ou Web Services são soluções para aplicações se comunicarem independente de linguagem,
+                    softwares e hardwares utilizados.</li> <br>
+
+                <li>
+                    Inicialmente Serviços Web foram criados para troca de mensagens utilizando a linguagem XML
+                    (Extensible Markup Language) sobre o protocolo HTTP sendo identificado por URL (Unifrom Resource
+                    Identifier).
+                </li> <br>
+                <li>
+                    Podemos dizer que Serviços Web são API's que se comunicam por meio de redes sobre o protocolo HTTP.
+                </li>
+            </ul>
+
+            <p>
+                Exemplo: vamos supor que tenho uma <strong>aplicação X</strong> que tem um <strong>BD X</strong>(banco
+                de dados) pertecente a ela e que tenho outra <strong>aplicação Y</strong> que tem <strong>BD Y</strong>
+                pertecente a ela, quero fazer essas aplicações se comunicarem, mas elas não são da mesma empresa, ou
+                seja, elas não foram feita de mesma linguagen e não estão na mesma rede.
+            </p>
+
+            <p>
+                a <strong>aplicação Y</strong> tem a <strong>BD Y</strong> mas, precisa de um dado que esta na
+                <strong>BD X</strong> que pertence a <strong>aplicação X</strong>, para ajudar a troca de infromações
+                entre aplicações, o <strong>Web service</strong> vai ter o acesso aos dados do <strong>BD X</strong> e
+                ira criar uma <strong>URL</strong> para a para a <strong>aplicação Y</strong> acessa-la.
+            </p>
+
+            <p>
+                O <Strong>Web Service</Strong> faz troca de mensagem com a <strong>aplicação Y</strong> atraves de:
+                <strong>XML, Json ....</strong> toda essa cominicação ocorre pelo protocolo <strong>HTTP</strong>
+            </p>
+            </p>
+
+            <h5>Exemplos de XML e JSON</h5>
+            <p>
+                <strong>XML</strong>: <br>
+                < endereco> <br> <br>
+
+                    < cep> 9999-99 < / cep><br>
+
+                            < bairro> Jardim Paulista < / bairro> <br>
+
+                                    < logradouro> AV. Paulista < / logradouro><br>
+
+                                            < cidade> São Paulo < / cidade><br>
+
+                                                    < numero> 99 < / numero><br> <br>
+
+                                                            < / endereco> <br> <br>
+
+                                                                <Strong>JSON</Strong>: <br>
+                                                                {<br> <br>
+                                                                "endereco" : {<br><br>
+                                                                "cep": "9999-99" <br>
+                                                                "logradouro": "AV. Paulista" <br>
+                                                                "bairro": "Jardim Paulista" <br>
+                                                                "cidade": "São Paulo" <br>
+                                                                "numero": 99 <br>
+                                                                } <br> <br>
+                                                                }
+
+            </p>
+
+            <h4>Vantagens de Web service</h4>
+            <p>
+            <ul>
+                <li>Liguagem comum</li>
+                <li>Integração</li>
+                <li>Reutilização de implementação</li>
+                <li> Segurança</li>
+                <li>Custos</li>
+            </ul>
+            </p>
+
+            <h4>Preincipais Tecnologias</h4>
+            <p>
+            <ul>
+                <li>SOAP</li>
+                <li>REST</li>
+                <li>XML</li>
+                <li>JSON</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="art">
+            <h4>Estrutura SOAP</h4>
+            <p>
+            <ul>
+                <li>O que é SOAP</li>
+                <li>As vantagens de se utilizar SOAP</li>
+                <li>O que é XML</li>
+                <li>Entender a estrutura de uma mensagem SOAP</li>
+            </ul>
+
+            <Strong>SOAP</Strong>
+            <p>
+            <ul>
+                <li>SOAP - Simple Object Access Protocol(Protocolo Simple de Acesso a Objeto)</li> <br>
+                <li>É um protocolo baseado em XML para acessar serviços web principalmente por HTTP.</li> <br>
+                <li>Pode-se dizer que SOAP é uma definição de como serciços web se comunicam.</li> <br>
+                <li>Foi desenvolvido para facilitar a integrações entre aplicações.</li>
+            </ul>
+            </p>
+            <h5>Vantagens</h5>
+            <p>
+            <ul>
+                <li>Permite integrações entre aplicações, independente de linguagem, pois usa como linguagem comum o
+                    XML.</li> <br>
+                <li>É independente de plataforma e software.</li> <br>
+                <li>Meio de transporte genérico, ou seja, pode ser usado por outros protocolos além do HTTP.</li> <br>
+            </ul>
+            </p>
+            </p>
+
+            <p>
+            <h4>XML</h4>
+            <p>
+            <ul>
+                <li>XML - Esntensible Markup Langage</li>
+                <li>É uma lingagem de marcação criada na década de 90 pela W3C</li>
+                <li>Facilata a separação de conteúdo</li>
+                <li>Não tem limitação de criação de tags</li>
+                <li>Linguagem comum para integrações entre aplicações</li>
+            </ul>
+            </p>
+
+            <h4>Estrutura SOAP</h4>
+            <p>
+                O "SOAP Menssage" possui uma estrutura única que deve sempre ser seguida.
+            </p>
+            <div>
+                <h4 id="Soap">SOAP Envelope</h4>
+                <div><h4>SOAP Header</h4></div>
+                <div><h4>SOAP Body</h4></div>
+            </div>
+            <ul>
+                <li><strong>SOAP Envelope</strong> é o primeiro elemento do documento e é usado para encapsular toda a mensagem SOAP.</li> <br>
+                <li><strong>SOAP Header</strong> é o elemento onde possui informações de atributos e metadados da requisição.</li> <br>
+                <li><strong>SOAP Body</strong> é o elemento que contém os detalhes da mensagem.</li>
+            </ul>
+
+            <h4>Mensagem SOAP</h4>
+            <div>
+                < soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" > <br><br>
+                < soap:Header> <br>
+                < /soap:Header > <br>
+                < soap:Body> <br>
+                    < m:MetodoEndereco xmlns:m="http://www.exmple.org/endereco"> <br>
+                    < m:Cidade> Rio de janeiro< /m:Cidade> <br>
+                    < m:CEP> 99999-99< /m:CEP> <br>
+                    < m:logradouro>Avenidade Atlatida< /m:logradouro> <br>
+                    < m:Numero>99< /m:Numero> <br>
+
+                    < /m:endereco> <br>
+                < /soap:Body> <br> <br>
+            < /soap-envelope >
+            </div>
+            </p>
+        </div>
+
+        <div class="art">
+            <h4>Entendendoo que é WSDL e XSD</h4>
+            
+        </div>
         <div class="art"></div>
         <div class="art"></div>
     </div>
 
     <div class="con_arqui">
+        <h2>Conceitos de Arquitetura em aplicações para Internet</h2>
         <div class="art"></div>
         <div class="art"></div>
         <div class="art"></div>
     </div>
 
     <div class="app_move">
+        <h2>Arquitetura de aplicações moveis e internet das coisas</h2>
         <div class="art"></div>
         <div class="art"></div>
         <div class="art"></div>
@@ -44,6 +225,7 @@
     </div>
 
     <div class="arq-dados-ess">
+        <h2>Arquiteura de Dados essencial</h2>
         <div class="art"></div>
         <div class="art"></div>
         <div class="art"></div>
