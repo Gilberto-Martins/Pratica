@@ -1,0 +1,24 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.menu li{
+    float: left;
+    list-style: none;
+}
+
+.menu a{
+    margin-right: 25px;
+}
+
+section{
+    margin: 1.3rem;
+    padding: 1.2rem;
+}
+
+section div{
+    margin: 1,4rem;
+    padding: 1rem;
+    border: 1px solid black;
+}
