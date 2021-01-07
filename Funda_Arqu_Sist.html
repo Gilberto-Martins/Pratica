@@ -173,40 +173,184 @@
             </p>
             <div>
                 <h4 id="Soap">SOAP Envelope</h4>
-                <div><h4>SOAP Header</h4></div>
-                <div><h4>SOAP Body</h4></div>
+                <div>
+                    <h4>SOAP Header</h4>
+                </div>
+                <div>
+                    <h4>SOAP Body</h4>
+                </div>
             </div>
             <ul>
-                <li><strong>SOAP Envelope</strong> é o primeiro elemento do documento e é usado para encapsular toda a mensagem SOAP.</li> <br>
-                <li><strong>SOAP Header</strong> é o elemento onde possui informações de atributos e metadados da requisição.</li> <br>
+                <li><strong>SOAP Envelope</strong> é o primeiro elemento do documento e é usado para encapsular toda a
+                    mensagem SOAP.</li> <br>
+                <li><strong>SOAP Header</strong> é o elemento onde possui informações de atributos e metadados da
+                    requisição.</li> <br>
                 <li><strong>SOAP Body</strong> é o elemento que contém os detalhes da mensagem.</li>
             </ul>
 
             <h4>Mensagem SOAP</h4>
             <div>
-                < soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" > <br><br>
-                < soap:Header> <br>
-                < /soap:Header > <br>
-                < soap:Body> <br>
-                    < m:MetodoEndereco xmlns:m="http://www.exmple.org/endereco"> <br>
-                    < m:Cidade> Rio de janeiro< /m:Cidade> <br>
-                    < m:CEP> 99999-99< /m:CEP> <br>
-                    < m:logradouro>Avenidade Atlatida< /m:logradouro> <br>
-                    < m:Numero>99< /m:Numero> <br>
+                < soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"> <br><br>
+                    < soap:Header> <br>
+                        < /soap:Header> <br>
+                            < soap:Body> <br>
+                                < m:MetodoEndereco xmlns:m="http://www.exmple.org/endereco"> <br>
+                                    < m:Cidade> Rio de janeiro< /m:Cidade> <br>
+                                            < m:CEP> 99999-99< /m:CEP> <br>
+                                                    < m:logradouro>Avenidade Atlatida< /m:logradouro> <br>
+                                                            < m:Numero>99< /m:Numero> <br>
 
-                    < /m:endereco> <br>
-                < /soap:Body> <br> <br>
-            < /soap-envelope >
+                                                                    < /m:endereco> <br>
+                                                                        < /soap:Body> <br> <br>
+                                                                            < /soap-envelope>
             </div>
             </p>
         </div>
 
         <div class="art">
             <h4>Entendendoo que é WSDL e XSD</h4>
-            
+
+            <p>
+            <ul>
+                <li>O que é um WSDL</li>
+                <li>O que é um XSD</li>
+                <li>SOAP na prática</li>
+            </ul>
+
+            <div>
+                <h4>WSDL</h4>
+                <ul>
+                    <li>WSDL - Web Services Description Language.</li>
+                    <li>Usado pra descrever Web Services, funciona como um contrato do serviço.</li>
+                    <li>A descrição é feito em um documento XML, onde é descrito o serviço, especificações de acesso,
+                        operações e métodos</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>XSD</h4>
+                <ul>
+                    <li>XSD - XML Schema Definition</li>
+                    <li>É um schema no formato XML usado para definir a estrutura de dados que será validada no XML.
+                    </li>
+                    <li>O XSD funciona como um documentoção de como deve ser montado o SOAP Message(XML) que seá enviado
+                        atravès de Web Service.</li>
+                </ul>
+            </div>
+
+            <div>
+                <H4>Pratica</H4>
+                <p>
+                    Acesse o pag: <a href="http://www.soapclient.com/xml/soapresponder.wsdl" target="_blank">pagina da
+                        pratica</a>
+                </p>
+            </div>
+            </p>
+
         </div>
-        <div class="art"></div>
-        <div class="art"></div>
+
+        <div class="art">
+            <h4>Aprenda o que são REST, API e JSON</h4>
+
+            <ul>
+                <li>O que é REST</li>
+                <li>Vantagens em se utilizar REST</li>
+                <li>O que é API</li>
+                <li>Entendendo os métodos utilizados pelo REST</li>
+                <li>Estrutura de um REST</li>
+                <li>Estrutura de um JSON</li>
+            </ul>
+
+            <div>
+                <h4>REST</h4>
+                <ul>
+                    <li>REST - Representational State Transfer.</li>
+                    <li>É um estilo de arquitetura de sofrware que define a implementação de um, serviço web</li>
+                    <li>Pode trabalhar com os formatos XML, JSON ou outros</li>
+                </ul>
+
+                <h4>Vantagens do REST</h4>
+                <ul>
+                    <li>Permite integrações entre aplicações e também entre cliente e servidor em páginas web e
+                        aplicações</li> <br>
+                    <li>Utiliza dos métodos HTTP para definir a operação que está sendo efetuada.</li> <br>
+                    <li>Arquitetura de fácil compreensão</li>
+                </ul>
+
+                <h4>Estrutura do REST</h4>
+                <p>
+                    tenho <strong>pc(cliente)</strong> que ira fazer uma requisição para um <Strong>Servidor</Strong>
+                    atraves de um <strong>HTTP(GET, POST, PUT, DELETE... )</strong>, dai o servidor ira retorna um
+                    código de operação <strong>Retorna mensgagem (Tesxo, JSON, XML....)</strong>
+                </p>
+
+                <div>
+                    <p>
+                        Quando uma palicação web disponibiliza um conjunto de rotinas e padões atraves de serviços web
+                        podemos chama essa conjuntos de API
+                    </p>
+                </div>
+
+                <h4>API</h4>
+                <ul>
+                    <li>API -Application Programming Interface</li> <br>
+                    <li>São conjuntos de rotas documentados e disponibilizados por uma aplicação para que outras
+                        aplicações possam consumir suas funcionalidades.</li> <br>
+                    <li>Ficou popular com o aumento dos serviços web.</li> <br>
+                    <li>As maiores plataformas de tecnologia displibilizam APIs para acessos de suas funcionalidades,
+                        algumas delas são: <strong>Facebook, Twitter, Telegram, Whatapp, GitHube...</strong></li>
+                </ul>
+            </div>
+
+            <h4>Princinpais Métodos HTTP</h4>
+            <ul>
+                <li><Strong>GET</Strong> - Solicita a representação de um recurso.</li>
+                <li><strong>POST</strong> - Solicita a criação de um recurso.</li>
+                <li><strong>DELETE</strong> - Solicita a exclusão de um recurso.</li>
+                <li><strong>PUT</strong> - Solicita a atualização de um recurso.</li>
+            </ul>
+
+
+            <h4>JSON</h4>
+            <ul>
+                <li>JSON - JavaScript Objsct Notation.</li>
+                <li>Formatação leve utilizada para troca de mensagens entre sistemas.</li>
+                <li>Usa-se de uma estrutura de chave e valor e também de listas ordenadas.</li>
+                <li>Um dos formatos mais populares e mais utilizados pra troca de mensagens entre sistemas.</li>
+            </ul>
+
+            <div>
+                <h4>Exemplo de JSON</h4>
+                <P>
+                    { <br><br>
+                    "nome": "Os vingadores", <br>
+                    "ano_lancamento": "2019", <br>
+                    "personagens" : [ <br> <br>
+                    { <br>
+                        "nome" : "Thanos" <br>
+                    },
+                    <br>
+                    { <br>
+                        "nome" : "homem de Ferro" <br>
+                    },
+                    <br>
+                    { <br>
+                        "nome": "Thor" <br>
+                    }
+                    <br>
+                    ] <br>
+                    }
+                </P>
+            </div>
+
+        </div>
+
+        <div class="art">
+            <h2>Proxima aula</h2>
+            <p>
+                
+            </p>
+        </div>
     </div>
 
     <div class="con_arqui">
