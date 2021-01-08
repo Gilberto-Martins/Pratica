@@ -3,10 +3,10 @@ body{
     margin: 0;
     max-width: 959px;
     max-height: 591px;
+    display: inline;
 }
 
 .menu li{
-    float: left;
     list-style: none;
 }
 
